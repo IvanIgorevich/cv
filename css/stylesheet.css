@@ -1,0 +1,65 @@
+.title {
+    text-align: center;
+}
+
+body {
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 1.8em;
+}
+
+body a {
+    text-decoration: none;
+}
+
+body a:hover {
+    text-decoration: underline;
+}
+
+.bio {
+    position: sticky;
+    top: 0;
+}
+
+.skills_wrap {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.skills {
+    flex-basis: 25%;
+    text-align: center;
+    list-style: none;
+    flex-grow: 1;
+    border-bottom: 1px solid #E1E1E1;
+}
+
+.employer {
+    text-decoration: underline;
+    margin-bottom: 0;
+}
+
+.position,
+.education,
+.language {
+    list-style: none;
+}
+
+@media (max-width: 850px) {
+    .bio {
+        position: static;
+    }
+
+    .columns {
+        width: 100% !important;
+    }
+
+    .photo {
+        max-height: 391.688px;
+    }
+}
+
+@media (max-width: 480px) {
+    .skills {
+        flex-basis: 50%;
+    }
+}
