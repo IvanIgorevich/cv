@@ -27,7 +27,7 @@
 <div class="container">
     <div class="title">
         <h1>Ivan Zemchikov</h1>
-        <h2>Ruby on Rails developer</h2>
+        <h2>Ruby on Rails / Full-stack Developer</h2>
     </div>
     <div class="four columns bio">
         <div class="row">
@@ -37,17 +37,18 @@
         </div>
         <div>
             <div>Ivan Zemchikov</div>
-            <small>Ruby on Rails developer</small>
+            <small>Ruby on Rails / Full-stack Developer</small>
             <h3>Info:</h3>
             <ul>
-                <li>Russia, Samara</li>
-                <li>Date of Birth: December 27, 1983</li>
+                <li>Samara, Russia / Remote</li>
+                <li>Commercial experience since 2022</li>
             </ul>
             <h3>Contacts:</h3>
             <ul>
                 <li><a href="tel:+79276871383">+7 927 687 13 83</a></li>
                 <li><a href="mailto:zemchikov0@gmail.com">zemchikov0@gmail.com</a></li>
                 <li><a href="https://github.com/IvanIgorevich">GitHub/IvanIgorevich</a></li>
+                <li><a href="https://github.com/ivan-zemchikov">GitHub/ivan-zemchikov</a> (work account, Domcap)</li>
                 <li><a href="https://t.me/IvZemch">t.me/IvZemch</a></li>
             </ul>
         </div>
@@ -55,82 +56,168 @@
 
     <div class="seven columns">
         <div>
-            <h3 class="title">About myself:</h3>
+            <h3 class="title">Profile:</h3>
             <p>
-                Hello, I'm a highly organized, high-performing, and goal-oriented web developer. I thrive on tackling challenges of all levels and consistently overcome them with success. I'm dedicated to continuous self-improvement, particularly in the realm of Ruby on Rails, and I aspire to grow into a team leader role.
+                Ruby on Rails / Full-stack developer with commercial experience building and maintaining a complex B2B platform in the real estate finance / loan servicing domain.
             </p>
 
             <p>
-                I'm a pleasant communicator with a high level of emotional intelligence and a strong commitment to developing my critical thinking skills while actively monitoring my cognitive biases. As an amateur runner, I maintain a healthy lifestyle, ensuring that I function at my cognitive best.
+                My main focus is backend development with Ruby on Rails, complex business logic, financial calculations, payment workflows, document generation, external API integrations, reporting, reconciliation, alerts, and legacy code modernization.
             </p>
 
             <p>
-                I easily adapt to team dynamics, adhering to established rules, and providing well-reasoned support for my perspectives. I'm committed to achieving both personal and professional excellence.
+                On my main long-term project, I work with business-critical areas of the system: payment schedules, default interest, ACH/Wire payments, monthly statements, investor reporting, borrower-facing functionality, DocuSign signing flows, Slack/Dropbox/email integrations, and document workflows.
             </p>
 
+            <p>
+                I am comfortable working with large existing codebases, translating complex operational rules into maintainable Rails architecture, covering business logic with tests, and improving production systems without breaking existing workflows. All team communication — tasks, code reviews, and discussions — is conducted in English.
+            </p>
         </div>
+
         <div>
-            <h3 class="title">Workplace:</h3>
+            <h3 class="title">Work Experience:</h3>
+
             <p>
-                Company <strong>Continure</strong>, Milwaukee, Wisconsin, USA.
+                <strong>Continure</strong>, Milwaukee, Wisconsin, USA<br>
+                <strong>Ruby on Rails / Full-stack Developer</strong><br>
+                2022 — Present · Remote
             </p>
 
             <p>
-                I worked on three projects:
+                I work at Continure on Ruby on Rails projects for the U.S. market. My main long-term project is <strong>Domcap / Real Estate Finance Platform</strong>: a large B2B portal for a New York real estate finance / loan servicing business.
             </p>
 
             <p>
-                <strong>Loandox</strong>: A CRM system for a financial institution, developed using Rails 6.1.7 and Ruby 3.2.0. This system was designed with a focus on versatility and readiness for potential sales to other businesses in the future.
+                Since late 2022, I have been continuously developing Domcap: implementing business logic, payment workflows, document management, DocuSign signing flows, investor/business entity functionality, reporting, alerts, reconciliation, and external service integrations. An open work diary maintained since March 2023 is available <a href="https://github.com/IvanIgorevich/work_diary/tree/main/monthly_reports">here</a>.
             </p>
 
+            <p><strong>Key responsibilities:</strong></p>
+            <ul>
+                <li>Develop and maintain a Ruby on Rails application for real estate finance / loan servicing operations.</li>
+                <li>Implement complex financial business logic: payment schedules, default interest, partial payments, cure periods, fees, monthly statements, credit lines, REO/foreclosure workflows.</li>
+                <li>Build payment workflows: ACH payments, Wire payments, approval flows, Construction Draw payouts, monthly mass payments, revocation logic, and duplicate-prevention rules.</li>
+                <li>Integrate external APIs: DocuSign, Slack, Dropbox, Plaid, Western Alliance Bank, HouseCanary, Google API, OpenAI/internal tooling.</li>
+                <li>Build document workflows: DOCX/PDF generation, Dropbox editing, e-signature flows, automatic signed-document uploads, Slack/email notifications.</li>
+                <li>Modernize legacy UI: Bootstrap 3 to Bootstrap 5, jQuery/best_in_place to Turbo/Stimulus, Vue.js to Rails/Hotwire when it improves maintainability.</li>
+                <li>Design Rails models, controllers, services, background jobs, Pundit policies/scopes, and REST-friendly controllers.</li>
+                <li>Write RSpec tests for models, services, request specs, business logic, and external API integrations.</li>
+                <li>Develop and maintain js-file-tools-api — an internal Node.js microservice for file processing with Dropbox API, Google API, and main Rails application integration.</li>
+                <li>Work with large reporting tables: filters, sorting, grouped columns, sticky headers, and CSV export.</li>
+                <li>Investigate production edge cases and fix issues in financial logic, permissions, integrations, and user workflows.</li>
+            </ul>
+
+            <p><strong>Key achievements:</strong></p>
+            <ul>
+                <li>Reworked core Payment Schedule and Default Interest logic: implemented new rules for default interest accrual, partial payments, unpaid due amounts, cure periods, paid date behavior, and manual overrides.</li>
+                <li>Built Monthly Mass Payments / Bulk Jobs workflow: auto-generated monthly pages, upcoming/late/default payment rows, bulk pull/revoke actions, monthly statements, ACH approvals, borrower emails, Dropbox editing, editable email templates, and duplicate-payment prevention.</li>
+                <li>Built Western Alliance Bank API integration and implemented Wire payments infrastructure: creation, confirmation, approval/review flow, bulk approve/reject actions, post-approval processing, and Wire payouts inside the Construction Draw workflow.</li>
+                <li>Improved WAB API failure support by storing x_correlation_id in the ActiveRecord model, allowing bank support to identify failed wire requests.</li>
+                <li>Implemented Google API integration for interactive charts and financial data visualization on reporting pages.</li>
+                <li>Developed and maintained js-file-tools-api — an internal Node.js microservice for file processing: built its integration with Dropbox API, Google API, and the main Rails application.</li>
+                <li>Built DocuSign API integration and document signing workflows for Payoff Letter, Default Letter, Term Sheet, and other documents: multi-stage process, signer changes, envelope revocation, webhook-based status tracking, automatic signed-document uploads, Slack/email notifications.</li>
+                <li>Built and improved Payoff Letter workflow: Generate → Edit/Review → Approve → Signing → Complete, borrower-facing sending options, per diem / total due / interest calculation fixes, wire vs check options, and fee inclusion rules.</li>
+                <li>Implemented Default Letter approval/signing workflow with 9 template types and repeatable approval/signing cycles.</li>
+                <li>Built Loan Tape reporting page: 40 metric columns, 9 column groups, 22 sortable fields, 5 filters, CSV export, and a robust sticky header that works with filtering, sorting, and horizontal scrolling.</li>
+                <li>Modernized Investor / Business Entity portal: rebuilt Investor Roll, Business Entity pages, investor-specific workflows, Capital Manager pages, and capital records flows, moving major UI sections to Bootstrap 5.</li>
+                <li>Created Credit Line Analysis & Reconciliation module: credit line capacity/drawn/available tracking, deal-level allocations, snapshots, end-of-month averaging, and integration of computed credit balances into deal/payment pages.</li>
+                <li>Implemented Plaid reconciliation tooling: separate Incoming/Outgoing views, filterable tables, mapping transactions to deals, and allocating one transaction across multiple targets such as principal, interest, default interest, fees, and other categories.</li>
+                <li>Implemented automated HouseCanary valuation mismatch alerts: automatic address analysis when a deal moves from Term Sheet, comparison of aggregate value with As-Is Value, Slack alerts, and user tasks when the difference exceeds 10%.</li>
+                <li>Built alerts/notifications platform improvements: maturity notifications, insurance expiry alerts, Alerts Manager UI, enable/disable controls, global editable templates, Slack/email options, and per-deal visibility.</li>
+                <li>Reworked Document Manager: added audit trail, fixed role-based visibility, implemented complex Pundit policies/scopes for employees and clients, and improved REST controller structure.</li>
+                <li>Replaced legacy best_in_place across the project with a custom Turbo inline editor component, touching multiple pages and 11 controllers.</li>
+                <li>Implemented support for multiple developers per deal instead of the previous single-developer model. Propagated this cross-cutting change through deal show page, Loan Tape, AML/KYC, Cash Flow, Term Sheet, Proof of Funds, Pipeline, Operations, Quick Leads, RD Clients, Due Diligences, global search, Deal Consistency, and Foreclosure pages.</li>
+                <li>Added new REO/post-Foreclosure deal status with sale amount/date capture, tax-related behavior, and a new Operations table.</li>
+                <li>Improved ACH/payment functionality: bulk actions on ACH approval page, backend sorting, filters with saved user preferences, linking admin-created ACH payments to deals/scheduled payments, and ACH support inside Construction Draw.</li>
+                <li>Built borrower-facing Construction Draw public link flow: a manager generates a secure token link, the client creates a Construction Draw request without authorization, and the system notifies the team after submission.</li>
+                <li>Implemented daily task summary email batching: user tasks, comments, and updates are accumulated and sent as one daily email instead of many separate emails.</li>
+                <li>Migrated Slack file upload integration from deprecated endpoints to the newer Slack upload flow.</li>
+                <li>Improved test coverage and maintainability: covered complex financial and permission logic with tests, updated 109 test files, and reduced full test suite runtime by about 40%.</li>
+            </ul>
+
+            <p><strong>Other projects at Continure:</strong></p>
             <p>
-                <strong>Holocenter</strong>: A website, available at <a href="https://holocenter.herokuapp.com/">Holocenter</a>, representing The Zekelman Holocaust Center in Farmington Hills, Michigan. This project was also built using Rails 6.1.7 and Ruby 3.2.0.
+                <strong>Loandox</strong> — a CRM system for a financial institution built with Ruby on Rails. Participated in feature development and project support.
             </p>
-
             <p>
-                <strong>Domcap</strong>: Another CRM system for a financial institution, this time in New York. It was developed using Rails 7.0.6 and Ruby 3.2.2. I have been working consistently on Domcap since late 2022, and since March 2023, I have been maintaining an open work diary where I provide detailed descriptions of the tasks I've completed. You can review it <a href="https://github.com/IvanIgorevich/work_diary/tree/main/monthly_reports">here</a>.
+                <strong>Holocenter</strong> — a website for The Zekelman Holocaust Center in Farmington Hills, Michigan. Participated in Rails development and maintenance.
             </p>
-
         </div>
+
         <div>
             <h3 class="title">Skills:</h3>
             <ul class="skills_wrap">
                 <li class="skills">Ruby</li>
-                <li class="skills">Rails</li>
-                <li class="skills">Rspec</li>
-                <li class="skills">SQL</li>
+                <li class="skills">Ruby on Rails</li>
+                <li class="skills">RSpec</li>
+                <li class="skills">MySQL</li>
 
-                <li class="skills">Git</li>
+                <li class="skills">PostgreSQL</li>
+                <li class="skills">SQL</li>
+                <li class="skills">JavaScript</li>
+                <li class="skills">Node.js</li>
+
+                <li class="skills">Hotwire</li>
+                <li class="skills">Turbo</li>
+                <li class="skills">Stimulus</li>
+                <li class="skills">Vue.js</li>
+
                 <li class="skills">HTML</li>
                 <li class="skills">CSS</li>
-                <li class="skills">JS</li>
+                <li class="skills">Bootstrap 5</li>
+                <li class="skills">Git</li>
 
+                <li class="skills">REST API</li>
+                <li class="skills">Background Jobs</li>
+                <li class="skills">Pundit</li>
+                <li class="skills">DocuSign API</li>
+
+                <li class="skills">Slack API</li>
+                <li class="skills">Dropbox API</li>
+                <li class="skills">Plaid API</li>
+                <li class="skills">Western Alliance Bank API</li>
+
+                <li class="skills">HouseCanary API</li>
+                <li class="skills">Google API</li>
+                <li class="skills">OpenAI API</li>
+                <li class="skills">Service Objects</li>
+
+                <li class="skills">Query Objects</li>
+                <li class="skills">CSV Export</li>
+                <li class="skills">PDF/DOCX generation</li>
+                <li class="skills">VCR</li>
+
+                <li class="skills">FactoryBot</li>
                 <li class="skills">XML</li>
                 <li class="skills">JSON</li>
                 <li class="skills">Linux</li>
+
                 <li class="skills">Heroku</li>
             </ul>
         </div>
+
         <div>
             <h3 class="title">Education:</h3>
             <ul class="education">
                 <li>Ruby on Rails Course
                     <ul>
-                        <li><a href="https://goodprogrammer.ru/">"Good programmer"</a> - «Rails Heliodor 2021» (2021-2022 <small>years</small>)</li>
+                        <li><a href="https://goodprogrammer.ru/">Good Programmer</a> — Rails Heliodor 2021 (2021–2022)</li>
                     </ul>
-                <li>Samara Law Institute of the Ministry of Justice</li>
-                <ul>
-                    <li>Faculty of Law (1999-2003 <small>years</small>)</li>
-                </ul>
+                </li>
+                <li>Samara Law Institute of the Ministry of Justice
+                    <ul>
+                        <li>Faculty of Law (1999–2003)</li>
+                    </ul>
+                </li>
             </ul>
         </div>
+
         <div>
-            <h3 class="title">Languages</h3>
+            <h3 class="title">Languages:</h3>
             <ul class="language">
-                <li>English</li>
-                <ul>
-                    <li>level - B1</li>
-                </ul>
+                <li>Russian — Native</li>
+                <li>English — B2/C1</li>
+                <li>Spanish — B1</li>
+                <li>German — A1</li>
             </ul>
         </div>
     </div>
